@@ -14,6 +14,11 @@ namespace Entidades
 
         protected Vehiculo(Propulsion.EPropulsion propulsion) : this(propulsion, false) { }
 
+        /// <summary>
+        /// Crea una nueva instancia de la clase Vehiculo con la propulsión y el estado AWD especificados.
+        /// </summary>
+        /// <param name="propulsion">El tipo de propulsión del vehículo.</param>
+        /// <param name="esAWD">Indica si el vehículo es AWD (4x4) o no.</param>
         protected Vehiculo(Propulsion.EPropulsion propulsion, bool esAWD)
         {
             this.propulsion = propulsion;

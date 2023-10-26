@@ -35,6 +35,8 @@
             cmbTipo = new ComboBox();
             lblTipo = new Label();
             pcbFabrica = new PictureBox();
+            lblTipoPropulsion = new Label();
+            cmbTipoPropulsion = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pcbFabrica).BeginInit();
             SuspendLayout();
             // 
@@ -75,7 +77,7 @@
             // 
             cmbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTipo.FormattingEnabled = true;
-            cmbTipo.Location = new Point(551, 87);
+            cmbTipo.Location = new Point(551, 65);
             cmbTipo.Name = "cmbTipo";
             cmbTipo.Size = new Size(219, 23);
             cmbTipo.TabIndex = 3;
@@ -84,7 +86,7 @@
             // 
             lblTipo.AutoSize = true;
             lblTipo.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTipo.Location = new Point(551, 45);
+            lblTipo.Location = new Point(551, 23);
             lblTipo.Name = "lblTipo";
             lblTipo.Size = new Size(178, 30);
             lblTipo.TabIndex = 4;
@@ -93,17 +95,38 @@
             // pcbFabrica
             // 
             pcbFabrica.Image = (Image)resources.GetObject("pcbFabrica.Image");
-            pcbFabrica.Location = new Point(623, 161);
+            pcbFabrica.Location = new Point(627, 193);
             pcbFabrica.Name = "pcbFabrica";
             pcbFabrica.Size = new Size(76, 76);
             pcbFabrica.TabIndex = 5;
             pcbFabrica.TabStop = false;
+            // 
+            // lblTipoPropulsion
+            // 
+            lblTipoPropulsion.AutoSize = true;
+            lblTipoPropulsion.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTipoPropulsion.Location = new Point(551, 111);
+            lblTipoPropulsion.Name = "lblTipoPropulsion";
+            lblTipoPropulsion.Size = new Size(178, 30);
+            lblTipoPropulsion.TabIndex = 7;
+            lblTipoPropulsion.Text = "Tipo de vehiculo:";
+            // 
+            // cmbTipoPropulsion
+            // 
+            cmbTipoPropulsion.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTipoPropulsion.FormattingEnabled = true;
+            cmbTipoPropulsion.Location = new Point(551, 153);
+            cmbTipoPropulsion.Name = "cmbTipoPropulsion";
+            cmbTipoPropulsion.Size = new Size(219, 23);
+            cmbTipoPropulsion.TabIndex = 6;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblTipoPropulsion);
+            Controls.Add(cmbTipoPropulsion);
             Controls.Add(pcbFabrica);
             Controls.Add(lblTipo);
             Controls.Add(cmbTipo);
@@ -127,5 +150,7 @@
         private ComboBox cmbTipo;
         private Label lblTipo;
         private PictureBox pcbFabrica;
+        private Label lblTipoPropulsion;
+        private ComboBox cmbTipoPropulsion;
     }
 }

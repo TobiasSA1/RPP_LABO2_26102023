@@ -21,6 +21,12 @@ namespace Recuperatorio_Primer_Parcial
             cmbTipo.Items.Add("Automóvil");
             cmbTipo.Items.Add("Camioneta");
             cmbTipo.Items.Add("Moto");
+
+            cmbTipoPropulsion.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTipoPropulsion.Items.Add("Combustion");
+            cmbTipoPropulsion.Items.Add("Hibrida");
+            cmbTipoPropulsion.Items.Add("Electrica");
+
             // Centrar el formulario en la pantalla
             this.StartPosition = FormStartPosition.CenterScreen;
         }
@@ -41,14 +47,16 @@ namespace Recuperatorio_Primer_Parcial
         {
             string tipo = cmbTipo.SelectedItem.ToString();
 
+            Propulsion.EPropulsion propulsion = (Propulsion.EPropulsion)cmbTipoPropulsion.SelectedIndex;
+
             switch (tipo)
             {
                 case "Automóvil":
                     return new Automovil();
                 case "Camioneta":
-                    return new Camioneta(Propulsion.EPropulsion.Combustion, true);
+                    return new Camioneta(propulsion, true);
                 case "Moto":
-                    return new Moto(Propulsion.EPropulsion.Electrica);
+                    return new Moto(propulsion);
                 default:
                     return null;
             }
