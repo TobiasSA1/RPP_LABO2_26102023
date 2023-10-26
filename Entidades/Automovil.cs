@@ -14,7 +14,7 @@ namespace Entidades
             get { return "Automovil"; }
         }
 
-        public Automovil() : base(EPropulsion.Hibrida)
+        public Automovil(Propulsion.EPropulsion propulsion) : base(propulsion)
         {
         }
     }

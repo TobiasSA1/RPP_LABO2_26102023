@@ -33,8 +33,8 @@ namespace Recuperatorio_Primer_Parcial
 
         private void InicializarFabrica()
         {
-            this.fabrica = new Fabrica(100);
-            this.fabrica += new Camioneta(Propulsion.EPropulsion.Electrica, true);
+            fabrica = new Fabrica(100);
+            fabrica += new Camioneta(Propulsion.EPropulsion.Electrica, true);
         }
 
         private void Refrescar()
@@ -52,7 +52,7 @@ namespace Recuperatorio_Primer_Parcial
             switch (tipo)
             {
                 case "Automóvil":
-                    return new Automovil();
+                    return new Automovil(propulsion);
                 case "Camioneta":
                     return new Camioneta(propulsion, true);
                 case "Moto":
@@ -67,7 +67,7 @@ namespace Recuperatorio_Primer_Parcial
             Vehiculo nuevoVehiculo = CrearVehiculo();
             if (nuevoVehiculo is not null)
             {
-                this.fabrica += nuevoVehiculo;
+                fabrica += nuevoVehiculo;
                 Refrescar();
             }
         }
@@ -77,7 +77,7 @@ namespace Recuperatorio_Primer_Parcial
             if (lstVehiculos.SelectedItem != null)
             {
                 Vehiculo vehiculo = (Vehiculo)lstVehiculos.SelectedItem;
-                this.fabrica -= vehiculo;
+                fabrica -= vehiculo;
                 Refrescar();
             }
         }
