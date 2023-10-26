@@ -18,14 +18,14 @@ namespace Entidades
 
         private Fabrica()
         {
-            capacidad = int.MaxValue; // Sin límite de capacidad
-            vehiculos = new List<Vehiculo>();
+            this.capacidad = int.MaxValue; // Sin límite de capacidad
+            this.vehiculos = new List<Vehiculo>();
         }
 
         public Fabrica(int capacidad)
         {
             this.capacidad = capacidad;
-            vehiculos = new List<Vehiculo>();
+            this.vehiculos = new List<Vehiculo>();
         }
 
         public static Fabrica operator +(Fabrica fabrica, Vehiculo vehiculo)

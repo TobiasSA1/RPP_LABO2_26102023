@@ -22,7 +22,7 @@ namespace Entidades
 
         protected override string GetInfo()
         {
-            string cabina = cabinaSimple ? "Simple (true)" : "Doble (false)";
+            string cabina = this.cabinaSimple ? "Simple (true)" : "Doble (false)";
             StringBuilder info = new StringBuilder(base.GetInfo());
             info.AppendFormat(", con cabina: [{0}]", cabina);
             return info.ToString();

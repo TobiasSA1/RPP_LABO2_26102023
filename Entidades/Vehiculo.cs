@@ -29,7 +29,7 @@ namespace Entidades
         {
             get
             {
-                return propulsion;
+                return this.propulsion;
             }
         }
 
@@ -37,7 +37,7 @@ namespace Entidades
         protected virtual string GetInfo()
         {
             string awdStatus = esAWD ? "SI" : "NO";
-            return string.Format("[{0}] con propulsión a [{1}], {2} es AWD, número de chasis [{3}].", Tipo, propulsion, awdStatus, numeroDeChasis);
+            return string.Format("[{0}] con propulsión a [{1}], {2} es AWD, número de chasis [{3}].", this.Tipo, this.propulsion, awdStatus, this.numeroDeChasis);
         }
 
         public static bool operator !=(Vehiculo v1, Vehiculo v2)
